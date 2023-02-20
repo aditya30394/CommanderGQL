@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/adityakumar/Projects/CommanderGQL/CommanderGQL.csproj": {}
+  },
+  "projects": {
+    "/Users/adityakumar/Projects/CommanderGQL/CommanderGQL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/adityakumar/Projects/CommanderGQL/CommanderGQL.csproj",
+        "projectName": "CommanderGQL",
+        "projectPath": "/Users/adityakumar/Projects/CommanderGQL/CommanderGQL.csproj",
+        "packagesPath": "/Users/adityakumar/.nuget/packages/",
+        "outputPath": "/Users/adityakumar/Projects/CommanderGQL/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/adityakumar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "GraphQl.Server.Ui.Voyager": {
+              "target": "Package",
+              "version": "[7.2.0, )"
+            },
+            "HotChocolate.AspNetCore": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "HotChocolate.Data.EntityFramework": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "Microsoft.EntityframeworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityframeworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/6.0.104/libexec/sdk/6.0.104/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
