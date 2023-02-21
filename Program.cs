@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<AppDbContext>(options =>
+builder.Services.AddPooledDbContextFactory<AppDbContext>(options =>
     options.UseSqlServer(configuration.GetConnectionString("CommandConStr")));
 
 builder.Services.AddGraphQLServer()
