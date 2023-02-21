@@ -17,10 +17,12 @@ builder.Services.AddPooledDbContextFactory<AppDbContext>(options =>
 builder.Services.AddGraphQLServer()
     .AddQueryType<Query>()
     .AddMutationType<Mutation>()
+    .AddSubscriptionType<Subscription>()
     .AddType<PlatformType>()
     .AddType<CommanderGQL.GraphQL.Commands.CommandType>()
     .AddFiltering()
-    .AddSorting();
+    .AddSorting()
+    .AddInMemorySubscriptions();
 
 var environment = builder.Environment;
 
@@ -31,7 +33,8 @@ if(environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-//app.UseHttpsRedirection();
+app.UseWebSockets();
+
 app.UseRouting();
 
 app.UseEndpoints(endpoints =>
