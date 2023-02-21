@@ -17,7 +17,9 @@ builder.Services.AddPooledDbContextFactory<AppDbContext>(options =>
 builder.Services.AddGraphQLServer()
     .AddQueryType<Query>()
     .AddType<PlatformType>()
-    .AddType<CommanderGQL.GraphQL.Commands.CommandType>();
+    .AddType<CommanderGQL.GraphQL.Commands.CommandType>()
+    .AddFiltering()
+    .AddSorting();
 
 var environment = builder.Environment;
 
