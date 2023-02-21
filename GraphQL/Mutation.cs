@@ -25,6 +25,7 @@ namespace CommanderGQL.GraphQL
             return new AddPlatformPayload(platform);
         }
 
+        [UseDbContext(typeof(AppDbContext))]
         public async Task<AddCommandPayload> AddCommandAsync(
             AddCommandInput input,
             [ScopedService] AppDbContext context,
