@@ -13,7 +13,8 @@ builder.Services.AddPooledDbContextFactory<AppDbContext>(options =>
     options.UseSqlServer(configuration.GetConnectionString("CommandConStr")));
 
 builder.Services.AddGraphQLServer()
-    .AddQueryType<Query>();
+    .AddQueryType<Query>()
+    .AddProjections();
 
 var environment = builder.Environment;
 
