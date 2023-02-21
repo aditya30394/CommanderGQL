@@ -1,6 +1,8 @@
 using CommanderGQL.Data;
 using CommanderGQL.GraphQL;
+using GraphQL.Server.Ui.Voyager;
 using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +30,12 @@ app.UseRouting();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapGraphQL();
+});
+
+app.UseGraphQLVoyager("/graphql-voyager",
+new VoyagerOptions()
+{
+    GraphQLEndPoint = "/graphql",
 });
 
 app.Run();
